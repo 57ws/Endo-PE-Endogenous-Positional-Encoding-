@@ -134,4 +134,14 @@ class LogicalMaskEncoding(nn.Module):
 https://github.com/liluoyi666/Endo-PE-Endogenous-Positional-Encoding-.git
 
 实验设备：RTX4070-8G
+
+Endo-PE-Endogenous-Positional-Encoding-/
+├── experiment.py
+├── imdb.py
+├── EEG.py
+├── coNL2003.py
+├── LICENSE
+├── README.md
+└── log/            #实验结果
+
 ```
