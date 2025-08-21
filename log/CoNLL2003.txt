@@ -1,0 +1,201 @@
+C:\Users\WQWS\PyCharmMiscProject\.venv\Scripts\python.exe D:\py_project\SpecialPositionalEncoder\test.py
+Using device: cuda
+Downloading CoNLL-2003 dataset...
+CoNLL-2003 dataset downloaded and extracted.
+Vocabulary size: 11985
+Number of tags: 10
+Tags: ['<PAD>', 'B-LOC', 'B-MISC', 'B-ORG', 'B-PER', 'I-LOC', 'I-MISC', 'I-ORG', 'I-PER', 'O']
+
+==================================================
+Training model with no positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.5347 | Val Loss: 0.3970
+Epoch 2/10: Train Loss: 0.2935 | Val Loss: 0.3066
+Epoch 3/10: Train Loss: 0.2042 | Val Loss: 0.2890
+Epoch 4/10: Train Loss: 0.1607 | Val Loss: 0.2727
+Epoch 5/10: Train Loss: 0.1327 | Val Loss: 0.2542
+EarlyStopping counter: 1 out of 3
+Epoch 6/10: Train Loss: 0.1143 | Val Loss: 0.2647
+EarlyStopping counter: 2 out of 3
+Epoch 7/10: Train Loss: 0.1023 | Val Loss: 0.2652
+EarlyStopping counter: 3 out of 3
+Epoch 8/10: Train Loss: 0.0940 | Val Loss: 0.2693
+Early stopping triggered
+Precision: 0.5245, Recall: 0.4639, F1: 0.4923
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+         LOC       0.83      0.61      0.71      1668
+        MISC       0.67      0.58      0.62       702
+         ORG       0.46      0.48      0.47      1661
+         PER       0.28      0.24      0.26      1617
+
+   micro avg       0.52      0.46      0.49      5648
+   macro avg       0.56      0.48      0.51      5648
+weighted avg       0.54      0.46      0.50      5648
+
+
+==================================================
+Training model with sinusoidal positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.5354 | Val Loss: 0.3671
+Epoch 2/10: Train Loss: 0.2824 | Val Loss: 0.2689
+Epoch 3/10: Train Loss: 0.1961 | Val Loss: 0.2516
+Epoch 4/10: Train Loss: 0.1516 | Val Loss: 0.2314
+EarlyStopping counter: 1 out of 3
+Epoch 5/10: Train Loss: 0.1265 | Val Loss: 0.2332
+EarlyStopping counter: 2 out of 3
+Epoch 6/10: Train Loss: 0.1083 | Val Loss: 0.2423
+Epoch 7/10: Train Loss: 0.0938 | Val Loss: 0.2302
+Epoch 8/10: Train Loss: 0.0855 | Val Loss: 0.2256
+EarlyStopping counter: 1 out of 3
+Epoch 9/10: Train Loss: 0.0771 | Val Loss: 0.2395
+EarlyStopping counter: 2 out of 3
+Epoch 10/10: Train Loss: 0.0703 | Val Loss: 0.2405
+Precision: 0.6124, Recall: 0.5744, F1: 0.5928
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+         LOC       0.80      0.69      0.74      1668
+        MISC       0.69      0.62      0.66       702
+         ORG       0.54      0.58      0.56      1661
+         PER       0.48      0.43      0.45      1617
+
+   micro avg       0.61      0.57      0.59      5648
+   macro avg       0.63      0.58      0.60      5648
+weighted avg       0.62      0.57      0.59      5648
+
+
+==================================================
+Training model with gru positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.4541 | Val Loss: 0.2901
+Epoch 2/10: Train Loss: 0.1932 | Val Loss: 0.2081
+Epoch 3/10: Train Loss: 0.1095 | Val Loss: 0.1786
+Epoch 4/10: Train Loss: 0.0718 | Val Loss: 0.1754
+EarlyStopping counter: 1 out of 3
+Epoch 5/10: Train Loss: 0.0518 | Val Loss: 0.1959
+EarlyStopping counter: 2 out of 3
+Epoch 6/10: Train Loss: 0.0378 | Val Loss: 0.2050
+EarlyStopping counter: 3 out of 3
+Epoch 7/10: Train Loss: 0.0310 | Val Loss: 0.2080
+Early stopping triggered
+Precision: 0.6897, Recall: 0.6328, F1: 0.6600
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+         LOC       0.82      0.70      0.76      1668
+        MISC       0.68      0.61      0.64       702
+         ORG       0.59      0.56      0.57      1661
+         PER       0.68      0.65      0.66      1617
+
+   micro avg       0.69      0.63      0.66      5648
+   macro avg       0.69      0.63      0.66      5648
+weighted avg       0.69      0.63      0.66      5648
+
+
+==================================================
+Training model with sin_gru positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.4558 | Val Loss: 0.2908
+Epoch 2/10: Train Loss: 0.1854 | Val Loss: 0.2064
+Epoch 3/10: Train Loss: 0.1062 | Val Loss: 0.1945
+Epoch 4/10: Train Loss: 0.0676 | Val Loss: 0.1766
+EarlyStopping counter: 1 out of 3
+Epoch 5/10: Train Loss: 0.0496 | Val Loss: 0.1865
+EarlyStopping counter: 2 out of 3
+Epoch 6/10: Train Loss: 0.0363 | Val Loss: 0.1855
+EarlyStopping counter: 3 out of 3
+Epoch 7/10: Train Loss: 0.0284 | Val Loss: 0.2115
+Early stopping triggered
+Precision: 0.6704, Recall: 0.6043, F1: 0.6356
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+         LOC       0.84      0.68      0.75      1668
+        MISC       0.63      0.60      0.62       702
+         ORG       0.59      0.58      0.58      1661
+         PER       0.63      0.55      0.58      1617
+
+   micro avg       0.67      0.60      0.64      5648
+   macro avg       0.67      0.60      0.63      5648
+weighted avg       0.68      0.60      0.64      5648
+
+
+==================================================
+Training model with Logical positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.5400 | Val Loss: 0.3902
+Epoch 2/10: Train Loss: 0.3007 | Val Loss: 0.3053
+Epoch 3/10: Train Loss: 0.2054 | Val Loss: 0.2630
+Epoch 4/10: Train Loss: 0.1535 | Val Loss: 0.2546
+Epoch 5/10: Train Loss: 0.1242 | Val Loss: 0.2450
+Epoch 6/10: Train Loss: 0.1051 | Val Loss: 0.2431
+Epoch 7/10: Train Loss: 0.0907 | Val Loss: 0.2378
+EarlyStopping counter: 1 out of 3
+Epoch 8/10: Train Loss: 0.0803 | Val Loss: 0.2528
+EarlyStopping counter: 2 out of 3
+Epoch 9/10: Train Loss: 0.0729 | Val Loss: 0.2598
+EarlyStopping counter: 3 out of 3
+Epoch 10/10: Train Loss: 0.0661 | Val Loss: 0.2622
+Early stopping triggered
+Precision: 0.5518, Recall: 0.5503, F1: 0.5511
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+         LOC       0.73      0.71      0.72      1668
+        MISC       0.63      0.60      0.62       702
+         ORG       0.51      0.54      0.52      1661
+         PER       0.39      0.38      0.38      1617
+
+   micro avg       0.55      0.55      0.55      5648
+   macro avg       0.56      0.56      0.56      5648
+weighted avg       0.55      0.55      0.55      5648
+
+
+==================================================
+Training model with sin_Logical positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.5404 | Val Loss: 0.3749
+Epoch 2/10: Train Loss: 0.2880 | Val Loss: 0.2999
+Epoch 3/10: Train Loss: 0.1927 | Val Loss: 0.2399
+Epoch 4/10: Train Loss: 0.1423 | Val Loss: 0.2207
+Epoch 5/10: Train Loss: 0.1130 | Val Loss: 0.2191
+Epoch 6/10: Train Loss: 0.0930 | Val Loss: 0.2161
+EarlyStopping counter: 1 out of 3
+Epoch 7/10: Train Loss: 0.0794 | Val Loss: 0.2257
+EarlyStopping counter: 2 out of 3
+Epoch 8/10: Train Loss: 0.0686 | Val Loss: 0.2467
+EarlyStopping counter: 3 out of 3
+Epoch 9/10: Train Loss: 0.0606 | Val Loss: 0.2313
+Early stopping triggered
+Precision: 0.6153, Recall: 0.6034, F1: 0.6093
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+         LOC       0.71      0.78      0.74      1668
+        MISC       0.66      0.59      0.62       702
+         ORG       0.56      0.55      0.56      1661
+         PER       0.54      0.48      0.51      1617
+
+   micro avg       0.62      0.60      0.61      5648
+   macro avg       0.62      0.60      0.61      5648
+weighted avg       0.61      0.60      0.61      5648
+
+
+Final Comparison of All Models:
+Positional Encoding  Precision  Recall     F1         Training Time (s)
+none                 0.5245     0.4639     0.4923     30.22
+sinusoidal           0.6124     0.5744     0.5928     37.58
+gru                  0.6897     0.6328     0.6600     22.49
+sin_gru              0.6704     0.6043     0.6356     25.37
+Logical              0.5518     0.5503     0.5511     38.62
+sin_Logical          0.6153     0.6034     0.6093     34.63
+
+进程已结束，退出代码为 0
