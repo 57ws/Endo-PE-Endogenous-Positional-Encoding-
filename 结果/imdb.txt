@@ -1,0 +1,118 @@
+实验说明：文本二分类任务
+
+C:\Users\WQWS\PyCharmMiscProject\.venv\Scripts\python.exe D:\py_project\SpecialPositionalEncoder\imdb.py
+Using device: cuda
+Loading IMDB dataset...
+Building vocabulary...
+Vocabulary size: 42428
+
+==================================================
+Training model with no positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.5815 | Train Acc: 0.6888 | Val Loss: 0.4788 | Val Acc: 0.7760 | Best Val Acc: 0.7760 | No Improve: 0/3
+Epoch 2/10: Train Loss: 0.4284 | Train Acc: 0.8069 | Val Loss: 0.4232 | Val Acc: 0.8074 | Best Val Acc: 0.8074 | No Improve: 0/3
+Epoch 3/10: Train Loss: 0.3406 | Train Acc: 0.8548 | Val Loss: 0.4402 | Val Acc: 0.8074 | Best Val Acc: 0.8074 | No Improve: 1/3
+Epoch 4/10: Train Loss: 0.2639 | Train Acc: 0.8952 | Val Loss: 0.4525 | Val Acc: 0.8184 | Best Val Acc: 0.8184 | No Improve: 0/3
+Epoch 5/10: Train Loss: 0.1955 | Train Acc: 0.9286 | Val Loss: 0.4470 | Val Acc: 0.8338 | Best Val Acc: 0.8338 | No Improve: 0/3
+Epoch 6/10: Train Loss: 0.1353 | Train Acc: 0.9534 | Val Loss: 0.5706 | Val Acc: 0.8278 | Best Val Acc: 0.8338 | No Improve: 1/3
+Epoch 7/10: Train Loss: 0.0863 | Train Acc: 0.9729 | Val Loss: 0.5821 | Val Acc: 0.8184 | Best Val Acc: 0.8338 | No Improve: 2/3
+Early stopping triggered after 8 epochs
+Test Loss: 0.7834
+Accuracy: 0.8053, Precision: 0.8200, Recall: 0.7822, F1: 0.8007
+Confusion Matrix:
+[[10354  2146]
+ [ 2722  9778]]
+
+==================================================
+Training model with sinusoidal positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.6345 | Train Acc: 0.6142 | Val Loss: 0.5428 | Val Acc: 0.7026 | Best Val Acc: 0.7026 | No Improve: 0/3
+Epoch 2/10: Train Loss: 0.4603 | Train Acc: 0.7860 | Val Loss: 0.4255 | Val Acc: 0.8020 | Best Val Acc: 0.8020 | No Improve: 0/3
+Epoch 3/10: Train Loss: 0.3616 | Train Acc: 0.8484 | Val Loss: 0.4047 | Val Acc: 0.8208 | Best Val Acc: 0.8208 | No Improve: 0/3
+Epoch 4/10: Train Loss: 0.2750 | Train Acc: 0.8909 | Val Loss: 0.4204 | Val Acc: 0.8106 | Best Val Acc: 0.8208 | No Improve: 1/3
+Epoch 5/10: Train Loss: 0.1969 | Train Acc: 0.9266 | Val Loss: 0.4848 | Val Acc: 0.8308 | Best Val Acc: 0.8308 | No Improve: 0/3
+Epoch 6/10: Train Loss: 0.1330 | Train Acc: 0.9539 | Val Loss: 0.6021 | Val Acc: 0.7950 | Best Val Acc: 0.8308 | No Improve: 1/3
+Epoch 7/10: Train Loss: 0.0875 | Train Acc: 0.9718 | Val Loss: 0.6215 | Val Acc: 0.8182 | Best Val Acc: 0.8308 | No Improve: 2/3
+Early stopping triggered after 8 epochs
+Test Loss: 0.7385
+Accuracy: 0.8069, Precision: 0.8326, Recall: 0.7682, F1: 0.7991
+Confusion Matrix:
+[[10569  1931]
+ [ 2897  9603]]
+
+==================================================
+Training model with gru positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.5793 | Train Acc: 0.6853 | Val Loss: 0.4839 | Val Acc: 0.7730 | Best Val Acc: 0.7730 | No Improve: 0/3
+Epoch 2/10: Train Loss: 0.4154 | Train Acc: 0.8124 | Val Loss: 0.4667 | Val Acc: 0.7984 | Best Val Acc: 0.7984 | No Improve: 0/3
+Epoch 3/10: Train Loss: 0.3236 | Train Acc: 0.8637 | Val Loss: 0.3954 | Val Acc: 0.8250 | Best Val Acc: 0.8250 | No Improve: 0/3
+Epoch 4/10: Train Loss: 0.2412 | Train Acc: 0.9032 | Val Loss: 0.3755 | Val Acc: 0.8398 | Best Val Acc: 0.8398 | No Improve: 0/3
+Epoch 5/10: Train Loss: 0.1672 | Train Acc: 0.9389 | Val Loss: 0.4592 | Val Acc: 0.8342 | Best Val Acc: 0.8398 | No Improve: 1/3
+Epoch 6/10: Train Loss: 0.1012 | Train Acc: 0.9663 | Val Loss: 0.5735 | Val Acc: 0.8384 | Best Val Acc: 0.8398 | No Improve: 2/3
+Early stopping triggered after 7 epochs
+Test Loss: 0.7562
+Accuracy: 0.8219, Precision: 0.7998, Recall: 0.8587, F1: 0.8282
+Confusion Matrix:
+[[ 9813  2687]
+ [ 1766 10734]]
+
+==================================================
+Training model with sin_gru positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.6140 | Train Acc: 0.6399 | Val Loss: 0.4742 | Val Acc: 0.7734 | Best Val Acc: 0.7734 | No Improve: 0/3
+Epoch 2/10: Train Loss: 0.4239 | Train Acc: 0.8075 | Val Loss: 0.3961 | Val Acc: 0.8196 | Best Val Acc: 0.8196 | No Improve: 0/3
+Epoch 3/10: Train Loss: 0.3203 | Train Acc: 0.8662 | Val Loss: 0.4056 | Val Acc: 0.8334 | Best Val Acc: 0.8334 | No Improve: 0/3
+Epoch 4/10: Train Loss: 0.2444 | Train Acc: 0.9043 | Val Loss: 0.3796 | Val Acc: 0.8458 | Best Val Acc: 0.8458 | No Improve: 0/3
+Epoch 5/10: Train Loss: 0.1687 | Train Acc: 0.9381 | Val Loss: 0.4871 | Val Acc: 0.8380 | Best Val Acc: 0.8458 | No Improve: 1/3
+Epoch 6/10: Train Loss: 0.1041 | Train Acc: 0.9663 | Val Loss: 0.5291 | Val Acc: 0.8412 | Best Val Acc: 0.8458 | No Improve: 2/3
+Early stopping triggered after 7 epochs
+Test Loss: 0.6791
+Accuracy: 0.8282, Precision: 0.8088, Recall: 0.8595, F1: 0.8334
+Confusion Matrix:
+[[ 9960  2540]
+ [ 1756 10744]]
+
+==================================================
+Training model with Logical positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.6132 | Train Acc: 0.6557 | Val Loss: 0.5082 | Val Acc: 0.7472 | Best Val Acc: 0.7472 | No Improve: 0/3
+Epoch 2/10: Train Loss: 0.4675 | Train Acc: 0.7821 | Val Loss: 0.4616 | Val Acc: 0.7878 | Best Val Acc: 0.7878 | No Improve: 0/3
+Epoch 3/10: Train Loss: 0.3709 | Train Acc: 0.8426 | Val Loss: 0.4443 | Val Acc: 0.7972 | Best Val Acc: 0.7972 | No Improve: 0/3
+Epoch 4/10: Train Loss: 0.2895 | Train Acc: 0.8861 | Val Loss: 0.4786 | Val Acc: 0.8008 | Best Val Acc: 0.8008 | No Improve: 0/3
+Epoch 5/10: Train Loss: 0.2034 | Train Acc: 0.9263 | Val Loss: 0.5140 | Val Acc: 0.8056 | Best Val Acc: 0.8056 | No Improve: 0/3
+Epoch 6/10: Train Loss: 0.1372 | Train Acc: 0.9544 | Val Loss: 0.6243 | Val Acc: 0.7990 | Best Val Acc: 0.8056 | No Improve: 1/3
+Epoch 7/10: Train Loss: 0.0963 | Train Acc: 0.9685 | Val Loss: 0.8209 | Val Acc: 0.8022 | Best Val Acc: 0.8056 | No Improve: 2/3
+Early stopping triggered after 8 epochs
+Test Loss: 0.7803
+Accuracy: 0.7844, Precision: 0.8129, Recall: 0.7388, F1: 0.7741
+Confusion Matrix:
+[[10375  2125]
+ [ 3265  9235]]
+
+==================================================
+Training model with sin_Logical positional encoding
+==================================================
+Epoch 1/10: Train Loss: 0.6568 | Train Acc: 0.5867 | Val Loss: 0.6317 | Val Acc: 0.6422 | Best Val Acc: 0.6422 | No Improve: 0/3
+Epoch 2/10: Train Loss: 0.4951 | Train Acc: 0.7615 | Val Loss: 0.4465 | Val Acc: 0.7908 | Best Val Acc: 0.7908 | No Improve: 0/3
+Epoch 3/10: Train Loss: 0.3806 | Train Acc: 0.8327 | Val Loss: 0.4231 | Val Acc: 0.8114 | Best Val Acc: 0.8114 | No Improve: 0/3
+Epoch 4/10: Train Loss: 0.2972 | Train Acc: 0.8780 | Val Loss: 0.4451 | Val Acc: 0.8146 | Best Val Acc: 0.8146 | No Improve: 0/3
+Epoch 5/10: Train Loss: 0.2097 | Train Acc: 0.9170 | Val Loss: 0.5066 | Val Acc: 0.8028 | Best Val Acc: 0.8146 | No Improve: 1/3
+Epoch 6/10: Train Loss: 0.1449 | Train Acc: 0.9487 | Val Loss: 0.6262 | Val Acc: 0.8106 | Best Val Acc: 0.8146 | No Improve: 2/3
+Early stopping triggered after 7 epochs
+Test Loss: 0.7051
+Accuracy: 0.7998, Precision: 0.8094, Recall: 0.7843, F1: 0.7967
+Confusion Matrix:
+[[10192  2308]
+ [ 2696  9804]]
+
+Final Comparison of All Models:
+Positional Encoding  Accuracy   Precision  Recall     F1         Training Time (s)
+none                 0.8053     0.8200     0.7822     0.8007     103.95
+sinusoidal           0.8069     0.8326     0.7682     0.7991     102.51
+gru                  0.8219     0.7998     0.8587     0.8282     80.03
+sin_gru              0.8282     0.8088     0.8595     0.8334     79.49
+Logical              0.7844     0.8129     0.7388     0.7741     103.69
+sin_Logical          0.7998     0.8094     0.7843     0.7967     90.89
+
+进程已结束，退出代码为 0
+
