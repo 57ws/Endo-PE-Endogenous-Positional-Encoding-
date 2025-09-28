@@ -55,7 +55,7 @@ class LogicalMaskEncoding(nn.Module):
 ```
 
 ### 4. 融合方案
-- **sin_gru**：GRU位置编码与正弦编码串联
+- **sin_gru**：正弦编码与GRU位置编码串联
 - **sin_Logical**：正弦编码与逻辑掩码位置编码串联
 
 
